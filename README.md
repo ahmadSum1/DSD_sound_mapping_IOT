@@ -4,7 +4,7 @@
 
 
 # Abstract.
-  This paper describes the development of a system that
+  This project is about the development of a system that
 enables real time data visualization via a webapp regarding sound
 intensity using multiple node devices connected through internet. The
 prototype was realized using ATmega328 (Arduino Nano) and
