@@ -1,0 +1,17 @@
+div#map {
+    height:600px;
+    width: 800px;
+    margin: auto;
+}
+
+.main{
+	border-radius: 15px 50px 30px;
+}
+
+html,body{
+/*	background: url(https://cdn.pixabay.com/photo/2017/09/11/22/50/background-2740731_960_720.jpg);*/
+	background: url(background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

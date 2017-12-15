@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">CSE461/EEE414</a>
+        </div>
+    </div>
+</nav>
+<div class="container bg-success main" id="map">
+
+</div>
+<div class="container invisible">
+<input type="button" class="btn btn-info" value="Input Button" onclick="location.href = '\index2.html';">
+<input type="button" class="btn btn-info" value="Input Button" onclick="location.href = 'http:\\www.google.com';">
+<input type="button" class="btn btn-info" value="Input Button" onclick="location.href = 'http:\\www.google.com';">
+</div>
+
+
+
+
+</body>
+<!-- imports -->
+<script src="helper_funcs.js"></script>
+<script src="google_map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_GBZGXULj5wjPBg-XFaCxHRePSHW5E9A&callback=initMap"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="firebase.js"></script>
+
+
+<!-- main scripts to run -->
+<script>
+    // set time out due to asynchronous map definition
+    
+    var circle;
+    var circle1;
+    setTimeout(function(){
+
+
+
+
+        // call api
+        dbRef.on('value', function (snapshot) {
+            // Delete old values if new values come
+            if (circle != undefined){
+                circle.setMap(null)
+
+            }
+            if (circle1 != undefined){ circle1.setMap(null) }
+            var data = snapshot.val();
+
+            var ub4Data = data.Sensor_UB4;
+            var messData = data.Sensor_MESS;
+    //    create new values
+        console.log(ub4Data.center);
+        
+        circle = drawCircle(map,ub4Data.center,hslToHex(mapToRange(ub4Data.currentNoise, [30, 90], [120, 0]), 100, 50));
+        circle1 = drawCircle(map,messData.center,hslToHex(mapToRange(messData.currentNoise, [10, 80], [120, 0]), 100, 50))
+       
+
+        })
+    
+
+        
+    }, 500);
+
+
+
+
+
+</script>
+
+
+</html>
