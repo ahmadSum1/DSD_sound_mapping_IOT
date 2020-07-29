@@ -21,3 +21,7 @@ then be used to carry out researches regarding sound pollution in
 targeted areas.
 Keywords: Sound Sensor, NodeMCU, ESP8266, Noise Pollution,
 Mapping, IoT, Google firebase.
+
+# Publications:
+- ICIEV and icIVPR, 2018 (conference paper)
+- Find the full paper at https://arxiv.org/abs/2002.11188
