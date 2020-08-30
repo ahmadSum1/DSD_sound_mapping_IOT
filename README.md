@@ -22,6 +22,11 @@ targeted areas.
 Keywords: Sound Sensor, NodeMCU, ESP8266, Noise Pollution,
 Mapping, IoT, Google firebase.
 
+# Architecture.
+
+![Alt text](./DSD block diagram.png?raw=true "Block Diagram")
+  
+
 # Publications:
 - ICIEV and icIVPR, 2018 (conference paper)
 - Find the full paper at https://arxiv.org/abs/2002.11188
