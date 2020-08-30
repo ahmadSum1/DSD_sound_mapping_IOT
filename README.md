@@ -24,7 +24,7 @@ Mapping, IoT, Google firebase.
 
 # Architecture.
 
-![Alt text](./DSD block diagram.png?raw=true "Block Diagram")
+![Alt text](./DSD_block_diagram.png?raw=true "Block Diagram")
   
 
 # Publications:
